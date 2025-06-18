@@ -1,4 +1,4 @@
-// 4. Forecast.tsx
+// Forecast.tsx
 export function Forecast({ data }: { data: any[] }) {
   if (!data || data.length === 0) return null;
 
@@ -9,12 +9,12 @@ export function Forecast({ data }: { data: any[] }) {
         return [date, item];
       })
     ).values()
-  ).slice(0, 5);
+  ).slice(0, 6);
 
   return (
     <div className="bg-white/20 dark:bg-zinc-800/50 shadow-xl rounded-2xl p-4 md:p-6 backdrop-blur-md">
       <h2 className="text-[25px] md:text-3xl font-bold mb-4 text-yellow-300">5-Day Forecast</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
         {dailyData.map((item, i) => {
           const iconUrl = `https://openweathermap.org/img/wn/${item.weather[0].icon}.png`;
           return (
