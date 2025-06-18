@@ -12,8 +12,8 @@ export function Forecast({ data }: { data: any[] }) {
   ).slice(0, 5);
 
   return (
-    <div className="bg-white/20 dark:bg-zinc-800/50 shadow-xl rounded-2xl p-6 backdrop-blur-md">
-      <h2 className="text-3xl font-bold mb-4 text-yellow-300">5-Day Forecast</h2>
+    <div className="bg-white/20 dark:bg-zinc-800/50 shadow-xl rounded-2xl p-4 md:p-6 backdrop-blur-md">
+      <h2 className="text-[25px] md:text-3xl font-bold mb-4 text-yellow-300">5-Day Forecast</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
         {dailyData.map((item, i) => {
           const iconUrl = `https://openweathermap.org/img/wn/${item.weather[0].icon}.png`;

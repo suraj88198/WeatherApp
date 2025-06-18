@@ -20,7 +20,7 @@ function ThemeToggle() {
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       className="absolute top-4 right-4"
     >
-      {theme === 'dark' ? '☀ Light' : '🌙 Dark'}
+      {theme === 'dark' ? '☀' : '🌙'}
     </Button>
   );
 }
@@ -81,10 +81,10 @@ export default function Home() {
 
   return (
     <ThemeProvider attribute="class" defaultTheme="system">
-      <main className={`relative min-h-screen bg-gradient-to-br ${backgroundGradient} dark:from-gray-900 dark:to-black text-white p-6 transition-all duration-500`}>
+      <main className={`relative min-h-screen bg-gradient-to-br ${backgroundGradient} dark:from-gray-900 dark:to-black text-white p-4 md:p-6 transition-all duration-500`}>
         <ThemeToggle />
         <div className="max-w-5xl mx-auto text-center space-y-7">
-          <h1 className="text-6xl font-extrabold tracking-tight text-yellow-300">Weather <span className="text-white">ForeCasts</span></h1>
+          <h1 className="text-[25px] sm:text-[35px] md:text-[50px] font-extrabold tracking-tight text-yellow-300">Weather <span className="text-white">ForeCasts</span></h1>
           <WeatherSearch onSearch={handleSearch} />
           {loading && <p className="text-lg animate-pulse">Loading...</p>}
           {error && <p className="text-red-300 text-lg font-semibold">{error}</p>}

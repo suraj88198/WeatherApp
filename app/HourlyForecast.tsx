@@ -5,8 +5,8 @@ export function HourlyForecast({ data }: { data: any[] }) {
   const nextHours = data.slice(0, 6); // Next 6 intervals (18 hours)
 
   return (
-    <div className="bg-white/20 dark:bg-zinc-800/50 shadow-xl rounded-2xl p-6 backdrop-blur-md">
-      <h2 className="text-3xl font-bold mb-4 text-yellow-300">Hourly Forecast</h2>
+    <div className="bg-white/20 dark:bg-zinc-800/50 shadow-xl rounded-2xl p-4 md:p-6 backdrop-blur-md">
+      <h2 className="text-[25px] md:text-3xl font-bold mb-4 text-yellow-300">Hourly Forecast</h2>
       <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 overflow-x-auto scrollbar-hide">
         {nextHours.map((item, i) => {
           const iconUrl = `https://openweathermap.org/img/wn/${item.weather[0].icon}.png`;
