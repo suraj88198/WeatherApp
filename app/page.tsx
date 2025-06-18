@@ -93,6 +93,8 @@ export default function Home() {
               <CurrentWeather data={weatherData} />
               <HourlyForecast data={forecastData} />
               <Forecast data={forecastData} />
+
+              <div className="powered-text mt-[20px]">Developed By : <span className="font-semibold text-yellow-300">Suraj Kushwah</span></div>
             </div>
           )}
         </div>
